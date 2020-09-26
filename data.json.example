@@ -1,0 +1,12 @@
+{
+    "owm" : {
+        "apikey":"6a6a6a6a6a6a6a6a6a6a6a6a6a6a6a6",
+        "location":"Kiev,ua",
+        "units":"C",
+        "language":"EN"
+    },
+    "tg" : {
+        "bottoken":"123456789:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "chatid":123456789
+    }
+}
