@@ -1,12 +1,13 @@
-## Script for sending forecast from OpenWeatherMap to Telegram
+# Script for sending forecast from OpenWeatherMap to Telegram
 
-### Requirements
+## Requirements
 
 - [OpenWeatherMap API key](https://openweathermap.org/api/one-call-api)
 - [Telegram Bot Token](https://t.me/botfather)
 
-### Data structure
-```
+## Data structure
+
+```json
 {
     "owm" : {
         "apikey":"6a6a6a6a6a6a6a6a6a6a6a6a6a6a6a6",
@@ -21,7 +22,8 @@
 }
 ```
 
-### Usage
-```
+## Usage
+
+```bash
 go run forecast.go data.json
 ```
