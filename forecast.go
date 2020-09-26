@@ -112,7 +112,7 @@ func main() {
 	default:
 		langString = [3]string{"Now in ", "Air temperature", "Forecast"}
 	}
-	message := fmt.Sprintf("%s%s %s. %s %.0f°C\n", langString[0], current.Name, current.Weather[0].Description, langString[1], current.Main.Temp)
+	message := fmt.Sprintf("%s%s %s. %s %.0f°%s\n", langString[0], current.Name, current.Weather[0].Description, langString[1], current.Main.Temp, data.OWM.Units)
 
 	w, err := getForecast5(data.OWM)
 	if err != nil {
@@ -121,7 +121,7 @@ func main() {
 	message = message + langString[2] + ":\n"
 	for _, v := range w.List {
 		tm := fmt.Sprintf("%d:00", time.Unix(int64(v.Dt), 0).Hour())
-		m := fmt.Sprintf("%-5s %.0f°C, %s\n", tm, v.Main.Temp, v.Weather[0].Description)
+		m := fmt.Sprintf("%-5s %.0f°%s, %s\n", tm, v.Main.Temp, data.OWM.Units, v.Weather[0].Description)
 		message = message + m
 	}
 
